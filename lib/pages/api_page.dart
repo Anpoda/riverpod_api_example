@@ -6,7 +6,7 @@ class ApiPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // ignore: invalid_use_of_protected_member
-    final state = ref.watch(userNotifierProvider.notifier).state;
+    final state = ref.watch(userNotifierProvider);
     return Scaffold(
       body: state.when(
             loading: () => const Center(
